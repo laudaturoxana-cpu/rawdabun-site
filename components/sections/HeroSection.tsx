@@ -122,9 +122,30 @@ export default function HeroSection() {
             className="flex flex-wrap justify-center gap-10 text-cream/90"
           >
             {[
-              { icon: '✨', text: '100% Fără Alergeni' },
-              { icon: '🏆', text: 'Certificat DSV/DSP' },
-              { icon: '💎', text: 'Premium Quality' }
+              {
+                icon: (
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+                text: '100% Fără Alergeni'
+              },
+              {
+                icon: (
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                ),
+                text: 'Certificat DSV/DSP'
+              },
+              {
+                icon: (
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                ),
+                text: 'Premium Quality'
+              }
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -132,7 +153,7 @@ export default function HeroSection() {
                 transition={{ type: "spring", stiffness: 300 }}
                 className="flex flex-col items-center gap-3 cursor-default group"
               >
-                <div className="w-16 h-16 rounded-full bg-rose-gold/20 backdrop-blur-md border border-rose-gold/40 flex items-center justify-center text-3xl group-hover:bg-rose-gold/30 transition-all duration-300 shadow-xl">
+                <div className="w-16 h-16 rounded-full bg-rose-gold/20 backdrop-blur-md border border-rose-gold/40 flex items-center justify-center text-rose-gold group-hover:bg-rose-gold/30 group-hover:text-gold transition-all duration-300 shadow-xl">
                   {item.icon}
                 </div>
                 <span className="font-quote text-sm tracking-wider">{item.text}</span>

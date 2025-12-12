@@ -12,21 +12,21 @@ const testimonials = [
     role: 'Mamă, București',
     quote: 'Andrei a mâncat tortul și a zâmbit exact ca ceilalți copii. Prima dată când nu a trebuit să stea deoparte. Mulțumesc, Andreea!',
     rating: 5,
-    avatar: '👩'
+    initials: 'EP'
   },
   {
     name: 'Mihai A.',
     role: 'Antreprenor, București',
     quote: 'Am comandat pentru aniversarea Elenei. A fost WOW. Toți prietenii au întrebat de unde. Raw da Bun = cadoul perfect.',
     rating: 5,
-    avatar: '👨‍💼'
+    initials: 'MA'
   },
   {
     name: 'Sofia L.',
     role: 'UX Designer, Stockholm/București',
     quote: 'Finally found quality raw vegan in București! Tastes exactly like what I\'d get in Stockholm. Absolutely love it!',
     rating: 5,
-    avatar: '👩‍💻'
+    initials: 'SL'
   }
 ];
 
@@ -81,7 +81,11 @@ export default function TestimonialsSection() {
 
                 {/* Author */}
                 <div className="flex items-center gap-3 mt-auto pt-4 border-t border-gray-100">
-                  <div className="text-4xl">{testimonial.avatar}</div>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-rose-gold to-gold flex items-center justify-center flex-shrink-0">
+                    <span className="font-heading font-semibold text-deep-chocolate text-lg">
+                      {testimonial.initials}
+                    </span>
+                  </div>
                   <div>
                     <p className="font-semibold text-chocolate">{testimonial.name}</p>
                     <p className="text-sm text-chocolate/60">{testimonial.role}</p>
