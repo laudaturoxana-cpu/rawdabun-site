@@ -68,28 +68,31 @@ export default function StorySection() {
           </div>
         </motion.div>
 
-        {/* Image */}
+        {/* Image - ÎNLOCUIEȘTE CU POZA REALĂ ANDREEA CÂND E DISPONIBILĂ */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative"
         >
-          <div className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl border-4 border-rose-gold/20">
+            {/* TODO: ÎNLOCUIEȘTE acest URL cu poza reală Andreea */}
             <img
-              src="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?q=80&w=2070"
-              alt="Andreea în laborator Raw da Bun"
+              src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2070"
+              alt="Andreea Obrișcă - Fondatoarea Raw da Bun"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-chocolate/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-hunter-green/40 via-transparent to-rose-gold/20" />
           </div>
 
-          {/* Decorative element */}
-          <div className="absolute -bottom-6 -right-6 bg-olive text-white p-6 rounded-xl shadow-lg max-w-xs">
-            <p className="font-quote italic text-lg">
-              "Fiecare tort e o operă de artă comestibilă, făcută cu iubire pentru familia ta."
+          {/* Elegant Quote Card */}
+          <div className="absolute -bottom-8 -right-8 bg-gradient-to-br from-rose-gold to-gold text-deep-chocolate p-8 rounded-2xl shadow-2xl max-w-sm border-2 border-cream/50">
+            <div className="absolute -top-4 -left-4 text-6xl text-cream/30">"</div>
+            <p className="font-quote italic text-xl leading-relaxed relative z-10">
+              Fiecare tort e o operă de artă comestibilă, făcută cu iubire pentru familia ta.
             </p>
-            <p className="mt-2 font-semibold">— Andreea Obrișcă</p>
+            <p className="mt-4 font-heading font-semibold text-lg text-right">— Andreea Obrișcă</p>
+            <div className="absolute -bottom-4 -right-4 text-6xl text-cream/30 rotate-180">"</div>
           </div>
         </motion.div>
       </div>
