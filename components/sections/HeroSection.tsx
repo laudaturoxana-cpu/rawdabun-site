@@ -6,94 +6,130 @@ import Button from '../ui/Button';
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Image with Overlay */}
+      {/* Animated Gradient Background */}
       <div className="absolute inset-0 z-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=2069')",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-chocolate/80 via-chocolate/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-olive via-chocolate to-olive-dark animate-gradient-slow" />
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-20 left-20 w-96 h-96 bg-mint rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
+          <div className="absolute top-40 right-20 w-96 h-96 bg-peach rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
+          <div className="absolute bottom-20 left-1/2 w-96 h-96 bg-beige rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
+        </div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-3xl">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
-          >
-            Fiecare copil merită să sărbătorească fără să se simtă exclus
-          </motion.h1>
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="mb-6"
+        >
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-lg border border-white/20 text-white text-sm font-medium mb-8 shadow-2xl">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-mint opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-mint"></span>
+            </span>
+            Laborator Certificat DSV/DSP București
+          </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-white/95 mb-10 leading-relaxed"
-          >
-            Torturi și prăjituri raw vegane 100% fără alergeni, create cu pasiune de Andreea pentru fiul ei, Matei — și pentru familia ta.
-          </motion.p>
+          {/* Main Heading with Gradient Text */}
+          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-tight">
+            <span className="block bg-gradient-to-r from-white via-mint to-white bg-clip-text text-transparent animate-gradient-text bg-[length:200%_auto]">
+              Fiecare copil merită
+            </span>
+            <span className="block bg-gradient-to-r from-white via-beige to-white bg-clip-text text-transparent animate-gradient-text bg-[length:200%_auto] animation-delay-1000">
+              să sărbătorească
+            </span>
+            <span className="block bg-gradient-to-r from-mint via-white to-mint bg-clip-text text-transparent animate-gradient-text bg-[length:200%_auto] animation-delay-2000">
+              fără să se simtă exclus
+            </span>
+          </h1>
 
+          {/* Subheading with Glassmorphism */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="max-w-3xl mx-auto mb-12"
           >
-            <Button href="#produse" variant="primary">
-              Comandă tortul perfect
-            </Button>
-            <Button href="#poveste" variant="secondary" className="!text-white !border-white hover:!bg-white hover:!text-chocolate">
-              Citește povestea noastră
-            </Button>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-mint to-peach rounded-2xl blur-lg opacity-25 group-hover:opacity-40 transition duration-1000" />
+              <p className="relative text-xl md:text-2xl text-white/95 leading-relaxed px-8 py-6 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10">
+                Torturi și prăjituri <span className="font-semibold text-mint">raw vegane 100% fără alergeni</span>, create cu pasiune de Andreea pentru fiul ei, Matei — și pentru familia ta.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+          >
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button
+                href="#produse"
+                variant="primary"
+                className="!bg-white !text-chocolate hover:!bg-mint hover:!text-chocolate !shadow-2xl !px-10 !py-5 !text-lg font-semibold"
+              >
+                🎂 Comandă tortul perfect
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button
+                href="#poveste"
+                variant="secondary"
+                className="!text-white !border-2 !border-white/30 !bg-white/10 backdrop-blur-md hover:!bg-white hover:!text-chocolate !px-10 !py-5 !text-lg font-semibold"
+              >
+                💚 Citește povestea noastră
+              </Button>
+            </motion.div>
           </motion.div>
 
           {/* Trust indicators */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-12 flex flex-wrap gap-6 text-white/90 text-sm"
+            transition={{ duration: 0.8, delay: 1 }}
+            className="flex flex-wrap justify-center gap-8 text-white/90"
           >
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-              <span>100% Fără Alergeni</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Certificat DSV/DSP</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
-              </svg>
-              <span>Făcut cu pasiune în București</span>
-            </div>
+            {[
+              { icon: '✨', text: '100% Fără Alergeni' },
+              { icon: '🏆', text: 'Certificat DSV/DSP' },
+              { icon: '❤️', text: 'Făcut cu pasiune' }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.1, y: -5 }}
+                className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 cursor-default"
+              >
+                <span className="text-2xl">{item.icon}</span>
+                <span className="font-medium">{item.text}</span>
+              </motion.div>
+            ))}
           </motion.div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2, repeat: Infinity, repeatType: 'reverse' }}
+        transition={{ duration: 1, delay: 1.5, repeat: Infinity, repeatType: 'reverse' }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
       >
-        <div className="flex flex-col items-center text-white">
-          <span className="text-sm mb-2">Scroll</span>
-          <svg className="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="flex flex-col items-center text-white/80"
+        >
+          <span className="text-sm mb-2 font-medium">Scroll pentru descoperire</span>
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );

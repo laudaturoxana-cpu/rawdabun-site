@@ -13,7 +13,7 @@ const products = [
     description: 'Cel mai rapid de preparat, perfect pentru comenzi urgente. Straturi de ciocolată și vanilie, textură cremoasă de vise.',
     price: 'de la 250 RON',
     weight: '(1.5 kg)',
-    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=2089',
+    image: 'https://gomagcdn.ro/domains2/rawdabun.com/files/product/medium/tort-zebra-cu-afine-632018.jpg',
     ingredients: 'Caju, afine, mix de fructe uscate, sirop arțar, ulei de cocos'
   },
   {
@@ -21,7 +21,7 @@ const products = [
     description: 'Profitabilitatea noastră #1. Combinația perfectă de dulce și sărat care te face să comanzi din nou.',
     price: 'de la 280 RON',
     weight: '(1.5 kg)',
-    image: 'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?q=80&w=2071',
+    image: 'https://gomagcdn.ro/domains2/rawdabun.com/files/product/medium/tort-cu-caramel-sarat-si-ciocolata-439828.jpg',
     ingredients: 'Curmale, sirop de arțar, caju, ulei de cocos, migdale, ciocolată crudă'
   },
   {
@@ -29,7 +29,7 @@ const products = [
     description: 'Perfect pentru evenimente: brownie raw, cheesecake mini, energy balls. Toți invitații vor întreba: "De unde?"',
     price: 'de la 150 RON',
     weight: '(10 bucăți)',
-    image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=2070',
+    image: 'https://gomagcdn.ro/domains2/rawdabun.com/files/product/medium/monoportii-platou-mixt-860067.jpg',
     ingredients: 'Varietate de nuci, fructe uscate, cacao crudă, siropuri naturale'
   }
 ];

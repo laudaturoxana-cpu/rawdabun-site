@@ -99,7 +99,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/60 text-sm">
-            © {new Date().getFullYear()} Raw da Bun SRL. Toate drepturile rezervate.
+            © 2026 Raw da Bun SRL. Toate drepturile rezervate.
           </p>
           <div className="flex gap-4 text-sm text-white/60">
             <a href="#" className="hover:text-white transition-colors">
