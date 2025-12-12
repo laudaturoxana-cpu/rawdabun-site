@@ -6,21 +6,30 @@
 }
 
 @theme inline {
-  /* Brand Colors */
-  --color-olive: #8B9D83;
-  --color-olive-dark: #6B7D63;
-  --color-beige: #F5E6D3;
-  --color-white: #FFFFFF;
-  --color-chocolate: #4A2C2A;
-  --color-mint: #C8E6C9;
-  --color-peach: #F4A259;
+  /* Premium Luxury Brand Colors */
+  --color-rose-gold: #D4A574;
+  --color-champagne: #F4E4D7;
+  --color-hunter-green: #1B4332;
+  --color-deep-chocolate: #3E2723;
+  --color-cream: #FAF9F6;
+  --color-gold: #C9A961;
+  --color-burgundy: #722F37;
+
+  /* Legacy color mappings for compatibility */
+  --color-olive: var(--color-hunter-green);
+  --color-olive-dark: #0F2922;
+  --color-beige: var(--color-champagne);
+  --color-white: var(--color-cream);
+  --color-chocolate: var(--color-deep-chocolate);
+  --color-mint: var(--color-rose-gold);
+  --color-peach: var(--color-gold);
 
   /* Semantic Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: var(--color-olive);
-  --color-secondary: var(--color-chocolate);
-  --color-accent: var(--color-mint);
+  --color-primary: var(--color-rose-gold);
+  --color-secondary: var(--color-hunter-green);
+  --color-accent: var(--color-gold);
 
   /* Typography */
   --font-heading: var(--font-playfair);

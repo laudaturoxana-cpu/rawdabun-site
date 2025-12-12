@@ -1,25 +1,26 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter, EB_Garamond } from "next/font/google";
+import { Cormorant_Garamond, Inter, Crimson_Pro } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
-const ebGaramond = EB_Garamond({
+const crimsonPro = Crimson_Pro({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["400", "600"],
+  weight: ["300", "400", "600"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -49,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="ro" className="scroll-smooth">
       <body
-        className={`${spaceGrotesk.variable} ${inter.variable} ${ebGaramond.variable} antialiased`}
+        className={`${cormorantGaramond.variable} ${inter.variable} ${crimsonPro.variable} antialiased`}
       >
         {children}
       </body>
