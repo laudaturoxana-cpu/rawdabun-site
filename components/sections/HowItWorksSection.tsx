@@ -91,33 +91,44 @@ export default function HowItWorksSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-20 bg-gradient-to-br from-white to-champagne rounded-2xl p-6 md:p-10 shadow-xl border-2 border-rose-gold/20"
+          className="mt-16 md:mt-20"
         >
-          <div className="grid md:grid-cols-2 gap-6 md:gap-10">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-rose-gold/20 rounded-full flex items-center justify-center">
-                <span className="text-2xl md:text-3xl">🚚</span>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h4 className="font-heading text-lg md:text-xl font-semibold text-chocolate mb-2">
-                  Livrare în București
-                </h4>
-                <p className="text-sm md:text-base text-chocolate/70">
-                  Livrare: 25 RON. <span className="font-semibold text-rose-gold">Gratuit</span> pentru comenzi peste 200 RON.
-                </p>
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6 max-w-5xl mx-auto">
+            {/* Livrare Card */}
+            <div className="bg-gradient-to-br from-white to-champagne rounded-xl p-6 md:p-8 shadow-lg border border-rose-gold/20 hover:shadow-xl transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-rose-gold to-gold rounded-lg flex items-center justify-center shadow-md">
+                  <svg className="w-5 h-5 md:w-6 md:h-6 text-deep-chocolate" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h4 className="font-heading text-base md:text-lg font-semibold text-chocolate mb-1.5">
+                    Livrare în București
+                  </h4>
+                  <p className="text-xs md:text-sm text-chocolate/70 leading-relaxed">
+                    Livrare: 25 RON · <span className="font-semibold text-rose-gold">Gratuit</span> peste 200 RON
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-rose-gold/20 rounded-full flex items-center justify-center">
-                <span className="text-2xl md:text-3xl">❄️</span>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h4 className="font-heading text-lg md:text-xl font-semibold text-chocolate mb-2">
-                  Păstrare optimă
-                </h4>
-                <p className="text-sm md:text-base text-chocolate/70">
-                  Frigider: <span className="font-semibold">5-7 zile</span>. Congelator: <span className="font-semibold">până la 3 luni</span>.
-                </p>
+
+            {/* Păstrare Card */}
+            <div className="bg-gradient-to-br from-white to-champagne rounded-xl p-6 md:p-8 shadow-lg border border-rose-gold/20 hover:shadow-xl transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-rose-gold to-gold rounded-lg flex items-center justify-center shadow-md">
+                  <svg className="w-5 h-5 md:w-6 md:h-6 text-deep-chocolate" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h4 className="font-heading text-base md:text-lg font-semibold text-chocolate mb-1.5">
+                    Păstrare optimă
+                  </h4>
+                  <p className="text-xs md:text-sm text-chocolate/70 leading-relaxed">
+                    Frigider: <span className="font-semibold">5-7 zile</span> · Congelator: <span className="font-semibold">până la 3 luni</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
