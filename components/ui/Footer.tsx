@@ -1,3 +1,5 @@
+import Logo from './Logo';
+
 export default function Footer() {
   return (
     <footer className="bg-chocolate text-white">
@@ -5,7 +7,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="font-heading text-2xl font-bold mb-4">Raw da Bun</h3>
+            <div className="mb-4">
+              <Logo size="md" showText={true} variant="dark" />
+            </div>
             <p className="text-white/80 mb-4 leading-relaxed">
               Laborator certificat DSV/DSP de torturi și prăjituri raw vegane, 100% fără alergeni.
               Creat cu pasiune de Andreea pentru Matei — și pentru familia ta.

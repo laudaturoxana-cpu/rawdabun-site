@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from './Button';
+import Logo from './Logo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,10 +20,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2">
-            <span className="text-2xl md:text-3xl font-heading font-bold text-chocolate">
-              Raw da Bun
-            </span>
+          <a href="/" className="flex items-center">
+            <Logo size="md" showText={true} />
           </a>
 
           {/* Desktop Menu */}
